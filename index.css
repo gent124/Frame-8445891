@@ -70,10 +70,50 @@ body {
     cursor: pointer;
 }
 
-.rectangle {
-    opacity: 0.6;
-    border-radius: 6px;
-    border: 1px solid var(--bordersgray-main, #CDCDCD);
-    width: 23px;
-    height: 23px;
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-input {
+    display: none;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.checkbox-label img {
+    width: 25px;
+    height: 25px;
+    transition: all 0.2s ease;
+}
+
+.checkbox-label:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.checkbox-input:checked+.checkbox-label img {
+    content: url('assets/svg/checkbox-click.svg');
+}
+
+
+.line {
+    background-color: #CDCDCD;
+    height: 1px;
+    width: 340px;
+}
+
+.line-dropdown {
+    padding: 10px 15px 10px 15px;
 }
